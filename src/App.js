@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import Button from './Button';
+import {GoBell, GoCloud, GoDatabase} from "react-icons/go";
 
+//Button is a custom component and not the button tag
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+   
+
+    return <div>
+        <div>
+            <Button secondary rounded outline className="mb-5" ><GoBell />Click Me!!</Button>
+        </div>
+        <div>
+            <Button danger outline className="mb-5"><GoCloud/>Buy Now!</Button>
+        </div>
+        <div>
+            <Button warning className="mb-5"><GoDatabase/>Hide Ads!</Button>
+        </div>
+        <div>
+            <Button secondary outline className="mb-5">Something!</Button>
+        </div>
+        <div>
+            <Button primary rounded className="mb-5">Music!</Button>
+        </div>
+    </div>;
 }
 
 export default App;
